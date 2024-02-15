@@ -11,38 +11,25 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import nature from "../img/nature.jpg";
-import john from "../img/user.jpg";
-const Post = () => {
+const Post = ({ title, date, content, image, avatar }) => {
   return (
     <Card sx={{ margin: 5 }}>
       <CardHeader
         avatar={
-          <Avatar
-            sx={{ bgcolor: "red" }}
-            aria-label="recipe"
-            src={john}
-          ></Avatar>
+          <Avatar sx={{ bgcolor: "red" }} aria-label="recipe" src={avatar} />
         }
         action={
           <IconButton aria-label="settings">
             <MoreVert />
           </IconButton>
         }
-        title="John Doe"
-        subheader="September 14, 2016"
+        title={title}
+        subheader={date}
       />
-      <CardMedia
-        component="img"
-        height="20%"
-        image={nature}
-        alt="Paella dish"
-      />
+      <CardMedia component="img" height="20%" image={image} alt="Paella dish" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          {content}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

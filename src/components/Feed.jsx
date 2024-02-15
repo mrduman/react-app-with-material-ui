@@ -1,4 +1,4 @@
-import { ExpandMore, Favorite, MoreVert, Share } from "@mui/icons-material";
+import { Favorite, FavoriteBorder, MoreVert, Share } from "@mui/icons-material";
 import {
   Avatar,
   Box,
@@ -7,7 +7,7 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
-  Collapse,
+  Checkbox,
   IconButton,
   Typography,
 } from "@mui/material";
@@ -47,7 +47,10 @@ const Feed = () => {
         </CardContent>
         <CardActions disableSpacing>
           <IconButton aria-label="add to favorites">
-            <Favorite />
+            <Checkbox
+              icon={<FavoriteBorder />}
+              checkedIcon={<Favorite sx={{ color: "red" }} />}
+            />
           </IconButton>
           <IconButton aria-label="share">
             <Share />

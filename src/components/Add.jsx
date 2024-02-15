@@ -66,9 +66,10 @@ const Add = () => {
         <Box
           width={400}
           height={280}
-          bgcolor={"white"}
           padding={3}
           borderRadius={5}
+          bgcolor="background.default"
+          color={"text.primary"}
         >
           <Typography variant="h6" color={"gray"} textAlign={"center"}>
             Create Post
